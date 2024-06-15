@@ -19,10 +19,6 @@ const ActionCard = () => {
       <Text style={styles.headingText}>Blog Card</Text>
 
       <View style={[styles.card, styles.cardElevated]}>
-        <View style={styles.headingContainer}>
-          <Text style={styles.headingTitle}>What is new in Js 21-ES12</Text>
-        </View>
-
         <Image
           source={{
             uri: 'https://static.vecteezy.com/system/resources/thumbnails/005/003/183/small/woman-travel-relax-the-beach-raised-arms-happy-against-sunset-in-summer-free-photo.jpg',
@@ -30,8 +26,12 @@ const ActionCard = () => {
           style={styles.cardImage}
         />
 
+        <View style={styles.headingContainer}>
+          <Text style={styles.headingTitle}>What is new in Js 21-ES12</Text>
+        </View>
+
         <View style={styles.bodyContainer}>
-          <Text numberOfLines={3}>
+          <Text numberOfLines={6} style={styles.bodyTitle}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, fuga
             ea! Totam labore dolorum sint, id consequuntur ut qui dignissimos
             atque autem, voluptatem esse iure nesciunt debitis, tenetur eum
@@ -44,12 +44,12 @@ const ActionCard = () => {
         <View style={styles.footerContainer}>
           <TouchableOpacity
             onPress={() => openWebsite('https://www.prothomalo.com/')}>
-            <Text>Read More</Text>
+            <Text style={styles.footerButton}>Read More</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             onPress={() => openWebsite('https://github.com/jishan1019')}>
-            <Text>Follow</Text>
+            <Text style={styles.footerButton}>Follow</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -67,13 +67,58 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 
-  card: {},
-  cardElevated: {},
-  headingContainer: {},
-  headingTitle: {},
+  card: {
+    width: 320,
+    margin: 'auto',
+    borderRadius: 4,
+  },
+  cardElevated: {
+    backgroundColor: '#FFFFFF',
+    elevation: 3,
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+    shadowColor: 'black',
+    shadowOpacity: 0.26,
+    shadowRadius: 8,
+  },
+  headingContainer: {
+    paddingHorizontal: 8,
+  },
+  headingTitle: {
+    color: 'black',
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginBottom: 4,
+  },
   cardImage: {
     height: 180,
+    marginBottom: 8,
+    borderTopRightRadius: 4,
+    borderTopLeftRadius: 4,
   },
-  bodyContainer: {},
-  footerContainer: {},
+  bodyContainer: {
+    padding: 4,
+    flex: 1,
+  },
+  bodyTitle: {
+    color: 'black',
+    fontSize: 14,
+    paddingHorizontal: 6,
+  },
+  footerContainer: {
+    paddingBottom: 20,
+    paddingTop: 30,
+  },
+  footerButton: {
+    backgroundColor: 'red',
+    height: 40,
+    color: 'white',
+    fontSize: 16,
+    textAlign: 'center',
+    padding: 8,
+    borderRadius: 4,
+    margin: 6,
+  },
 });
