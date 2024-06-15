@@ -9,9 +9,9 @@ const App = () => {
   return (
     <SafeAreaView>
       <ScrollView>
-        {/* <BlogHome /> */}
-        {/* <PassGeneratorHome /> */}
-        {/* <RandomColorGenerate /> */}
+        <BlogHome />
+        <PassGeneratorHome />
+        <RandomColorGenerate />
         <RandomDice />
       </ScrollView>
     </SafeAreaView>
